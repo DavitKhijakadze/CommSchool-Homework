@@ -1,9 +1,9 @@
 #task1
 
 products_id = {
-    1: "rocket",
-    2: "ship",
-    3: "helmet"
+    1: "Rocket",
+    2: "Ship",
+    3: "Helmet"
 }
 
 products_prices = {
@@ -12,7 +12,7 @@ products_prices = {
     3: 5000
 }
 
-Selected_products = []
+selected_products = []
 sum_of_proucts = 0
 
 while True:
@@ -26,12 +26,30 @@ while True:
     if client_response == 0:
         break
     elif client_response in products_id:
-        Selected_products.append(client_response)
+        selected_products.append(client_response)
         print(f"{products_id[client_response]} added to cart")
     else:
-        print("invalid choice, try again")
+        print("Invalid choice, try again")
 
-for number in Selected_products:
+for number in selected_products:
     sum_of_proucts += products_prices[number]
 
 print(f"The total amount payable is {sum_of_proucts}$")
+
+#task2
+
+i = 1
+
+while i != 20:
+    if i % 2 == 0:
+         print(f"{i} is Even number")
+    else:
+        print(f"{i} is Odd number")
+    i += 1
+
+for number in range(1,20):
+    if number % 2 == 0:
+         print(f"{number} is Even number")
+    else:
+        print(f"{number} is Odd number") 
+
