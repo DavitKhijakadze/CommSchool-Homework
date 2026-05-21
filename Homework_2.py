@@ -81,3 +81,15 @@ while True:
         print("You entered incorrect answer, try again: ")
 
 
+#task5
+
+mylist = range(100)
+
+number = 0
+
+while number < len(mylist):
+    square = number ** 2
+    cube = number ** 3
+    print(f"Square: {square} - Cube {cube}")
+
+    number += 1
