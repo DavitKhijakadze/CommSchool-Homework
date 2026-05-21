@@ -68,3 +68,16 @@ students = {
 for student in students:
     average_score = sum(students[student]) / len(students[student])
     print(f"{student}'s average score is {average_score}")
+
+
+#task4
+
+while True:
+    user_age = input("Please enter your age: ")
+    if user_age.isdigit():
+        print(f"You were born in {2026 - int(user_age)}")
+        break      
+    else:
+        print("You entered incorrect answer, try again: ")
+
+
