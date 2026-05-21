@@ -74,6 +74,7 @@ for student in students:
 
 while True:
     user_age = input("Please enter your age: ")
+    
     if user_age.isdigit():
         print(f"You were born in {2026 - int(user_age)}")
         break      
@@ -153,3 +154,28 @@ for item in transactions.values():
 print(total)
 
 
+#task10
+
+my_digit = 31
+number_of_attempts = 0
+
+print("Try and guess my number: ")
+
+while True:
+    inputed_digit = input("--->")
+    
+    if not inputed_digit.isdigit():
+        print("Invalid choice, try again")
+        continue
+    
+    converted_number = int(inputed_digit)
+    number_of_attempts += 1
+    
+    if converted_number < my_digit:
+        print("Too low! Go up")
+    elif converted_number > my_digit:
+        print("Too high! Go down.")
+    elif converted_number == my_digit:
+        break
+
+print(f"You guessed the number, number of attempts {number_of_attempts}")
