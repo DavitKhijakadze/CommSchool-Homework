@@ -15,13 +15,20 @@ products_prices = {
 selected_products = []
 sum_of_proucts = 0
 
+print("Hello, you are in the SpaceX store, select the appropriate number to purchase the product: ")
+
 while True:
-    print("Hello, you are in the SpaceX store, select the appropriate number to purchase the product: ")
 
     for product in products_id:
         print(f"{product}) {products_id[product]} - {products_prices[product]}$")
 
-    client_response = int(input("Enter 0 to finish: "))
+    client_input = input("Enter 0 to finish: ")
+
+    if not client_input.isdigit():
+        print("Invalid choice, try again")
+        continue
+
+    client_response = int(client_input)
 
     if client_response == 0:
         break
@@ -29,7 +36,7 @@ while True:
         selected_products.append(client_response)
         print(f"{products_id[client_response]} added to cart")
     else:
-        print("Invalid choice, try again")
+        print("Out of range, try again")
 
 for number in selected_products:
     sum_of_proucts += products_prices[number]
@@ -74,7 +81,7 @@ for student in students:
 
 while True:
     user_age = input("Please enter your age: ")
-    
+
     if user_age.isdigit():
         print(f"You were born in {2026 - int(user_age)}")
         break      
