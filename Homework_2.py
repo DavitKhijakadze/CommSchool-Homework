@@ -36,6 +36,7 @@ for number in selected_products:
 
 print(f"The total amount payable is {sum_of_proucts}$")
 
+
 #task2
 
 i = 1
@@ -53,3 +54,17 @@ for number in range(1,20):
     else:
         print(f"{number} is Odd number") 
 
+
+#task3
+
+students = {
+    "Ana": [89,66,12,75,11],
+    "Giorgi": [67,72,90,91,55],
+    "Levant": [49,36,88,98,34],
+    "Veronika": [99,88,32,65,99],
+    "Nika": [77,81,41,73,99]
+}
+
+for student in students:
+    average_score = sum(students[student]) / len(students[student])
+    print(f"{student}'s average score is {average_score}")
