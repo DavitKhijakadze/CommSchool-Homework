@@ -93,3 +93,12 @@ while number < len(mylist):
     print(f"Square: {square} - Cube {cube}")
 
     number += 1
+
+
+#task6:
+
+for digit in range(1, 11):
+    for number in range(1, 11):
+        print(digit * number, end="\t")
+    print()
+
