@@ -114,3 +114,18 @@ print("Total:", total)
 
 # numbers სიაში მიტითებული მონაცემები არ იყო ინტეჯერის ტიპის, რაც გამოიწვევდა typeerror-ს. აჯამებამდე ციკლში შეგვიძლია გავაინტეჯეროთ
 
+
+#task8
+
+data = ["5", 0, "3", True, "", 2, "x", False]
+total = 0
+
+for item in data:
+    if type(item) is str and item.isdigit():
+        total += int(item)
+    elif type(item) is int:
+        total += item
+
+print(f"Total sum is: {total}")
+
+
