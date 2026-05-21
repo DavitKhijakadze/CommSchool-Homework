@@ -102,3 +102,15 @@ for digit in range(1, 11):
         print(digit * number, end="\t")
     print()
 
+
+#task7
+
+numbers = ["1", "2", "3", "4"]
+total = 0
+
+for n in numbers:
+    total += int(n)
+print("Total:", total)
+
+# numbers სიაში მიტითებული მონაცემები არ იყო ინტეჯერის ტიპის, რაც გამოიწვევდა typeerror-ს. აჯამებამდე ციკლში შეგვიძლია გავაინტეჯეროთ
+
