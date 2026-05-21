@@ -129,3 +129,27 @@ for item in data:
 print(f"Total sum is: {total}")
 
 
+#task9
+
+transactions = {
+    "გიო": "100",
+    "ნიკა": 50,
+    "აკაკი": "30a",
+    "ლევანი": 0,
+    "ანა": "70",
+    "მარი": True
+}
+
+total = 0
+
+for item in transactions.values():
+    if type(item) is str and item.isdigit():
+        total += int(item)
+    elif type(item) is int:
+        total += item
+    elif type(item) is bool and item:
+        total += int(item)
+
+print(total)
+
+
