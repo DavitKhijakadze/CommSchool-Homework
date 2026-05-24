@@ -70,4 +70,20 @@ import random
 #     break
 
 
-#task5
+# #task5
+
+
+# def my_calc(number1, number2):
+
+#     if type(number1) is not int or type(number2) is not int:
+#         print("Entered data is not a number format")
+#         return
+
+#     print(f"Add:       {number1} + {number2} = {number1 + number2}")
+#     print(f"Subtract:    {number1} - {number2} = {number1 - number2}")
+#     print(f"Multiply: {number1} * {number2} = {number1 * number2}")
+#     print(f"Divide:       {number1} / {number2} = {number1 / number2}")
+#     print(f"Floor Divide: {number1} // {number2} = {number1 // number2}")
+#     print(f"Modulus:        {number1} % {number2} = {number1 % number2}")
+    
+# my_calc(4,2)
