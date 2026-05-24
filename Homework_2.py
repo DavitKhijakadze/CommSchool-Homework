@@ -84,7 +84,7 @@ while True:
 
     if user_age.isdigit():
         print(f"You were born in {2026 - int(user_age)}")
-        break      
+        break
     else:
         print("You entered incorrect answer, try again: ")
 
