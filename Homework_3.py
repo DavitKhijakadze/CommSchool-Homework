@@ -1,5 +1,5 @@
 import random
-
+import keyboard
 
 # #task1
 
@@ -147,7 +147,7 @@ import random
 # print(word_counter(word))
 
 
-# #task9
+#task9
 
 # random_words = ["house", "water", "cat", "book", "tree", "sun", "apple", "car", "river", "ball"]
 # chosen_word = random.choice(random_words)
@@ -158,8 +158,11 @@ import random
 
 # while attempt != 10:
 
-#     customer_word = input("---->: ")
+#     customer_word = input("If you want to turn off the game, enter 'exit', otherwise enter the desired character---->: ")
 #     attempt += 1
+    
+#     if customer_word == "exit":
+#         break
 
 #     if len(customer_word) > 1:     
 #         if customer_word == chosen_word:
@@ -201,3 +204,34 @@ import random
 
 # if clue != chosen_word:
 #     print(f"You lost, used attempts {attempt}. The word was: {chosen_word}")
+
+
+
+#task10
+
+computer_choices = ["left", "right"]
+attempt_counter = 0
+
+for attempt in range(1, 6):
+
+    print(f"attempt {attempt}: press ← or → arrow (press 'Esc' for quit)")
+    
+    customer_choice = keyboard.read_key()
+
+    while keyboard.is_pressed(customer_choice):
+        pass
+
+    comp_choice = random.choice(computer_choices)
+    
+    print(f"your move: {customer_choice} - computer move: {comp_choice}") 
+
+    if comp_choice == customer_choice:
+        attempt_counter += 1
+    
+    if customer_choice == "esc":
+        break
+
+if attempt_counter == 5:
+    print(f"Congratulations, you win! - {attempt_counter} attempts guessed")
+else:
+    print(f"You lose! - {attempt_counter} attempts guessed")
