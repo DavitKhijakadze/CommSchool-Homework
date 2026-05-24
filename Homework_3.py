@@ -32,16 +32,42 @@ import random
 #     print(i, end=" ")
 
 
-#task3
+# #task3
 
-lst = [random.randint(1, 20) for _ in range(10)]
-indexed_lst = list(enumerate(lst))
-sorted_index = sorted(indexed_lst, key=lambda x: x[1], reverse=True)
+# lst = [random.randint(1, 20) for _ in range(10)]
+# indexed_lst = list(enumerate(lst))
+# sorted_index = sorted(indexed_lst, key=lambda x: x[1], reverse=True)
 
-for original_index, value in sorted_index[:3]:
-    print(f"data {value} - index {original_index}")
+# for original_index, value in sorted_index[:3]:
+#     print(f"data {value} - index {original_index}")
 
-print(f"Main list: {lst}")
+# print(f"Main list: {lst}")
 
 
-#task4
+# #task4
+
+
+# inputed_width = None
+# inputed_height = None
+
+# while True:
+
+#     inputed_digit1 = input("Please enter any number for width: ")
+#     inputed_digit2 = input("Please enter any number for height: ")
+
+#     if not inputed_digit1.isdigit() or not inputed_digit2.isdigit():
+#         print("Entered data is not a number, please try again: ")
+#         continue
+    
+#     inputed_width = int(inputed_digit1)
+#     inputed_height = int(inputed_digit2)
+
+#     for height in range(inputed_height):
+#         for width in range(inputed_width):
+#             print("#", end="")
+#         print("#")
+    
+#     break
+
+
+#task5
