@@ -127,3 +127,21 @@ import random
 
 # answer = char_counter(in_str, char)
 # print(f"Character '{char}' in given string: {answer} times")
+
+
+# #task8
+
+
+# def word_counter(countable_word):
+
+#     if not isinstance(countable_word, str):
+#         print("Error: Input must be a string format")
+#         return
+
+#     splited_words = countable_word.split()
+
+#     return len(splited_words)
+
+# word = "Today the weather in Tbilisi is very warm and sunny"
+
+# print(word_counter(word))
