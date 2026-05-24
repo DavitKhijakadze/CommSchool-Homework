@@ -23,3 +23,10 @@ while True:
         break
 
 
+#task2
+
+for i in range(10,0,-1):
+    print(i, end=" ")
+
+
+#task3
