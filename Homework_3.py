@@ -89,22 +89,41 @@ import random
 # my_calc(4,2)
 
 
-#task6
+# #task6
 
-def draw_func(number1, number2):
+# def draw_func(number1, number2):
 
-    if type(number1) is not int or type(number2) is not int:
-        print("Entered data is not a number format")
-        return
+#     if type(number1) is not int or type(number2) is not int:
+#         print("Entered data is not a number format")
+#         return
     
-    for height in range(number2):
-        for width in range(number1):
-            print("#", end="")
-        print("#")
+#     for height in range(number2):
+#         for width in range(number1):
+#             print("#", end="")
+#         print("#")
 
-draw_func(5,6)
-
-
-#task7
+# draw_func(5,6)
 
 
+# #task7
+
+
+# def char_counter(entered_string, char):
+
+#     if type(entered_string) is not str or type(char) is not str:
+#         print("Entered data is not a str format")
+#         return
+    
+#     count = 0
+
+#     for character in entered_string:
+#         if character == char:
+#             count+=1
+    
+#     return count
+
+# in_str = "John and Jane Doe"
+# char = "J"
+
+# answer = char_counter(in_str, char)
+# print(f"Character '{char}' in given string: {answer} times")
