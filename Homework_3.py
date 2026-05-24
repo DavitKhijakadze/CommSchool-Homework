@@ -145,3 +145,59 @@ import random
 # word = "Today the weather in Tbilisi is very warm and sunny"
 
 # print(word_counter(word))
+
+
+# #task9
+
+# random_words = ["house", "water", "cat", "book", "tree", "sun", "apple", "car", "river", "ball"]
+# chosen_word = random.choice(random_words)
+# clue = "_" * len(chosen_word)
+# attempt = 0
+
+# print(f"You have 10 attempts to guess the word. The word is {clue}")
+
+# while attempt != 10:
+
+#     customer_word = input("---->: ")
+#     attempt += 1
+
+#     if len(customer_word) > 1:     
+#         if customer_word == chosen_word:
+#             clue = chosen_word
+#             print(f"Congratulations, you guessed the word {chosen_word}")
+#             print(f"Number of attempts: {attempt}")
+#             break
+#         else:
+#             print("The entered word is incorrect")
+#             print(f"Number of attempts: {attempt}")
+#             print(f"Guess the word {clue}")
+#             continue
+
+#     if len(customer_word) == 1:
+#         if not customer_word.isalpha():
+#             print("Inputed word is not alphabetical, try again: ")
+#             print(f"Number of attempts: {attempt}")
+#             print(f"Guess the word {clue}")
+#             continue
+
+#     lowering_word = customer_word.lower()
+
+#     if lowering_word in chosen_word:
+#         for guessed_word_index, letter in enumerate(chosen_word):
+#             if letter == lowering_word:
+#                 clue = clue[:guessed_word_index] + lowering_word + clue[guessed_word_index + 1:]
+#         if clue == chosen_word:
+#             print(f"Congratulations, you guessed the word {chosen_word}")
+#             print(f"Number of attempts: {attempt}")
+#             break
+#         print(f"Guess the word {clue}")
+#         print(f"Number of attempts: {attempt}")
+#         continue
+#     else:
+#         print("The word to guess does not contain this letter")
+#         print(f"Number of attempts: {attempt}")
+#         print(f"Guess the word {clue}")
+#         continue
+
+# if clue != chosen_word:
+#     print(f"You lost, used attempts {attempt}. The word was: {chosen_word}")
