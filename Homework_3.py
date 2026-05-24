@@ -87,3 +87,24 @@ import random
 #     print(f"Modulus:        {number1} % {number2} = {number1 % number2}")
     
 # my_calc(4,2)
+
+
+#task6
+
+def draw_func(number1, number2):
+
+    if type(number1) is not int or type(number2) is not int:
+        print("Entered data is not a number format")
+        return
+    
+    for height in range(number2):
+        for width in range(number1):
+            print("#", end="")
+        print("#")
+
+draw_func(5,6)
+
+
+#task7
+
+
