@@ -129,5 +129,43 @@ user_pass = password
 
 print(f"Password strength: {password_strength(user_pass)}")
 
+
 #task3
 
+def generate_fibonacci():
+
+    while True:
+        user_input = input("Enter the length of the Fibonacci sequence: ")
+
+        if not user_input:
+            print("You didn't enter anything! Please enter a number only.\n")
+            continue
+        elif user_input.isdigit():
+            length = int(user_input)
+            if length <= 0:
+                print("Please enter a number greater than 0")
+                continue
+            break 
+        else:
+            if any(char.isalpha() for char in user_input):
+                print(f"You entered letters ! Please enter a number only")
+            else:
+                print(f"You entered invalid symbols! Please enter a number only")
+
+        fib_sequence = []
+        
+    if length == 1:
+        return [0]
+    if length == 2:
+        return [0, 1]
+
+    fib_sequence = [0, 1]
+
+    for _ in range(2, length):
+        next_number = fib_sequence[-1] + fib_sequence[-2]
+        fib_sequence.append(next_number)
+
+    return fib_sequence
+
+fibonacci_sequence = generate_fibonacci()
+print(f"Fibonacci sequence: {fibonacci_sequence}")
