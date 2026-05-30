@@ -78,3 +78,56 @@ def password_questions():
 password = password_questions()
 print(f"Generated password: {password}")
 
+
+#task2
+
+def password_strength(password):
+
+    strength_score = 0
+    length = len(password)
+
+    if length >= 12:
+        strength_score += 3
+    elif length >= 8:
+        strength_score += 1
+
+    has_upper = False
+    has_lower = False
+    has_digit = False
+    has_special = False
+
+    for i in range(length):
+        char = password[i]
+
+        if char.isupper():
+            has_upper = True
+        elif char.islower():
+            has_lower = True
+        elif char.isdigit():
+            has_digit = True
+        else:
+            has_special = True
+
+    if has_upper:
+        strength_score += 2
+    if has_lower:
+        strength_score += 2
+    if has_digit:
+        strength_score += 2
+    if has_special:
+        strength_score += 2
+
+    # 4. შედეგის დაბრუნება ქულების მიხედვით
+    if strength_score <= 3:
+        return "weak"
+    elif strength_score <= 6:
+        return "medium"
+    else:
+        return "strong"
+
+user_pass = password
+
+print(f"Password strength: {password_strength(user_pass)}")
+
+#task3
+
