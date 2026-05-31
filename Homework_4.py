@@ -169,3 +169,57 @@ def generate_fibonacci():
 
 fibonacci_sequence = generate_fibonacci()
 print(f"Fibonacci sequence: {fibonacci_sequence}")
+
+
+#task4
+
+def check_palindrome(text):
+
+    clean_text = ""
+    for char in text:
+        if char.isalnum():
+            clean_text = clean_text + char.lower()
+
+    reversed_text = clean_text[::-1]
+
+    if clean_text == reversed_text:
+        print(f"The text is a palindrome: {clean_text}")
+        return
+
+    found = False
+    n = len(clean_text)
+    
+    for i in range(n):
+        string_after_delete = clean_text[:i] + clean_text[i+1:]
+        
+        if string_after_delete == string_after_delete[::-1]:
+            print(f"Closest palindrome found by deleting 1 character: {string_after_delete}")
+            found = True
+            break
+
+    if found == False:
+        for i in range(n + 1):
+            for char_to_insert in clean_text:
+                string_after_insert = clean_text[:i] + char_to_insert + clean_text[i:]
+                
+                if string_after_insert == string_after_insert[::-1]:
+                    print(f"Closest palindrome found by inserting 1 character: {string_after_insert}")
+                    found = True
+                    break
+            if found:
+                break
+
+    if found == False:
+        print(f"Cannot make a palindrome with 1 operation.")
+
+
+#task5
+
+def nickname_generator(name):
+
+    check_len_name = name.split()
+
+    if len(check_len_name) != 1:
+        return f"The entered text must contain only 1 word"
+    
+    
