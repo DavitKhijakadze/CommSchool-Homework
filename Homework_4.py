@@ -216,10 +216,81 @@ def check_palindrome(text):
 #task5
 
 def nickname_generator(name):
-
     check_len_name = name.split()
+    nicknames = []
 
     if len(check_len_name) != 1:
         return f"The entered text must contain only 1 word"
     
+    nick1 = "The_" + name
+    nick2 = name + "y"
+    nick3 = name + "inator"
+    nick4 = "Master_" + name
+    nick5 = name + "123"
     
+    nicknames.append(nick1)
+    nicknames.append(nick2)
+    nicknames.append(nick3)
+    nicknames.append(nick4)
+    nicknames.append(nick5)
+    
+    return nicknames
+
+print(nickname_generator("Alex"))
+
+
+#task6
+
+
+def sort__numbers(*args):
+
+    check_customer_answer = input("Do you want to sort in ascending, descending or random order? (a/d/r): ").lower()
+
+    if check_customer_answer == "a":
+        sorted_numbers = sorted(args)
+        return sorted_numbers
+    elif check_customer_answer == "d":
+        sorted_numbers = sorted(args, reverse=True)
+        return sorted_numbers
+    elif check_customer_answer == "r":
+        random.shuffle(args)
+        return args
+    else:
+        return "Invalid input. Please enter 'a', 'd', or 'r'"
+    
+
+#task7
+
+def text_cleaner(text):
+
+    cleaned_text = ""
+    for char in text:
+        if char.isalpha() or char.isspace():
+            cleaned_text += char
+
+    return cleaned_text
+    
+
+#task8
+
+def make_pyramid(numbers):
+
+    pyramid = []  
+    pyramid.append(numbers)   
+    current_row = numbers
+    
+    while len(current_row) > 1:
+        next_row = []
+        
+        for i in range(len(current_row) - 1):
+            pair_sum = current_row[i] + current_row[i+1]
+            next_row.append(pair_sum)
+            
+        pyramid.append(next_row)
+        current_row = next_row
+    
+    for row in pyramid:
+        print(*row)
+
+user_list = [3, 5, 7, 2]
+make_pyramid(user_list)
