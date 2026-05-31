@@ -294,3 +294,47 @@ def make_pyramid(numbers):
 
 user_list = [3, 5, 7, 2]
 make_pyramid(user_list)
+
+
+#task9
+
+def find_most_frequent_words(text):
+    words = text.lower().split()
+    word_counts = {}
+    
+    for word in words:
+        word = word.strip(".,!?\"'")
+        
+        if word in word_counts:
+            word_counts[word] = word_counts[word] + 1
+        else:
+            word_counts[word] = 1
+            
+    if not word_counts:
+        print("The text is empty")
+        return
+
+    max_count = max(word_counts.values())
+    
+    most_frequent_words = []
+    for word in word_counts:
+        if word_counts[word] == max_count:
+            most_frequent_words.append(word)
+            
+    print(most_frequent_words)
+    print(max_count)
+
+find_most_frequent_words("Python is great and python is easy")
+
+
+#task10
+
+def char_counter(text):
+
+    new_text = text.split()
+    dict_for_count = {}
+
+    for word in new_text:
+        dict_for_count[word] = len(word)
+
+    return dict_for_count
