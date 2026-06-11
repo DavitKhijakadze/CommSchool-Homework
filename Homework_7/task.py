@@ -93,3 +93,71 @@ if response.status_code == 200:
 first_user_name = users[0]["name"]
 
 print(first_user_name)
+
+
+#task8
+
+import requests
+
+url = "https://jsonplaceholder.typicode.com/posts"
+
+payload = {
+    "title": "Test",
+    "body": "Hello World",
+    "userId": 5
+}
+
+response = requests.post(url, json=payload)
+
+if response.status_code == 201:
+    print("Post created successfully")
+    
+    created_post = response.json()
+    print(f"sercer response: {created_post}")
+else:
+    print(f"error!: {response.status_code}")
+
+
+#task9
+
+url = "https://jsonplaceholder.typicode.com/todos"
+
+response = requests.get(url)
+
+if response.status_code == 200:
+    todos = response.json()
+    
+    incomplete_count = 0
+        
+    for task in todos:
+        if not task["completed"]:
+            print(f"ID: {task['id']} | Title: {task['title']}")
+            incomplete_count += 1
+            
+    print(f"Total number of incomplete tasks: {incomplete_count}")
+else:
+    print(f"Error! Status code: {response.status_code}")
+
+
+#task10
+
+posts_url = "https://jsonplaceholder.typicode.com/posts"
+users_url = "https://jsonplaceholder.typicode.com/users"
+
+posts_response = requests.get(posts_url)
+users_response = requests.get(users_url)
+
+if posts_response.status_code == 200 and users_response.status_code == 200:
+    posts = posts_response.json()
+    users = users_response.json()
+    
+    user_mapping = {user["id"]: user["name"] for user in users}
+        
+    for post in posts:
+        post_title = post["title"]
+        user_id = post["userId"]    
+        author_name = user_mapping.get(user_id, "Unknown Author")
+        
+        print(f"{post_title} – {author_name}")       
+else:
+    print("Failed to fetch data from one or both endpoints")
