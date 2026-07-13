@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Tbilisi Grand Hotel - დაჯავშნა</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 id="hotel-logo">🏨 Tbilisi Grand Hotel</h1>
+        <nav>
+            <ul>
+                <li><a href="#rooms">ოთახები</a></li>
+                <li><a href="#booking-form">დაჯავშნა</a></li>
+                <li><a href="#status">სტატუსი</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="rooms">
+            <h2>ხელმისაწვდომი ოთახები</h2>
+
+            <div class="room-card">
+                <h2>ოთახი #101</h2>
+                <p>ტიპი: Single</p>
+                <p>ფასი: 80₾ / ღამე</p>
+                <p class="status available">სტატუსი: თავისუფალია</p>
+            </div>
+
+            <div class="room-card">
+                <h2>ოთახი #201</h2>
+                <p>ტიპი: Double</p>
+                <p>ფასი: 130₾ / ღამე</p>
+                <p class="status available">სტატუსი: თავისუფალია</p>
+            </div>
+
+            <div class="room-card">
+                <h2>ოთახი #301</h2>
+                <p>ტიპი: Suite</p>
+                <p>ფასი: 250₾ / ღამე</p>
+                <p class="status booked">სტატუსი: დაკავებულია</p>
+            </div>
+        </section>
+
+        <section id="booking-form">
+            <h2>დაჯავშნის ფორმა</h2>
+            <form>
+                <label for="room-select">აირჩიეთ ოთახი:</label>
+                <select id="room-select" name="room">
+                    <option value="101">ოთახი #101 - Single</option>
+                    <option value="201">ოთახი #201 - Double</option>
+                    <option value="301">ოთახი #301 - Suite</option>
+                </select>
+
+                <label for="nights">ღამეების რაოდენობა:</label>
+                <input type="number" id="nights" name="nights" min="1" placeholder="მაგ: 3">
+
+                <label for="guest-name">თქვენი სახელი:</label>
+                <input type="text" id="guest-name" name="guest-name" placeholder="შეიყვანეთ სახელი">
+
+                <button type="submit" id="book-button">დაჯავშნა</button>
+            </form>
+        </section>
+
+        <section id="status">
+            <h2>დაჯავშნის სტატუსი</h2>
+            <p id="booking-status">ჯერ არ გაქვთ განხორციელებული დაჯავშნა</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tbilisi Grand Hotel. ყველა უფლება დაცულია.</p>
+    </footer>
+
+</body>
+</html>
