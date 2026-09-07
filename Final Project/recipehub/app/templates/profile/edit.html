@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Edit Profile – RecipeHub{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-7">
+    <div class="card border-0 shadow-sm">
+      <div class="card-body p-4">
+        <h2 class="mb-4">Edit profile</h2>
+        <form method="post" enctype="multipart/form-data" novalidate>
+          {{ form.hidden_tag() }}
+          <div class="mb-3">
+            {{ form.name.label(class='form-label') }}
+            {{ form.name(class='form-control') }}
+            {% for e in form.name.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
+          </div>
+          <div class="mb-3">
+            {{ form.email.label(class='form-label') }}
+            {{ form.email(class='form-control') }}
+            {% for e in form.email.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
+          </div>
+          <div class="mb-3">
+            {{ form.profile_image.label(class='form-label') }}
+            {{ form.profile_image(class='form-control') }}
+            {% for e in form.profile_image.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
+          </div>
+          {{ form.submit(class='btn btn-primary') }}
+          <a href="{{ url_for('profile.my_profile') }}" class="btn btn-link">Cancel</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

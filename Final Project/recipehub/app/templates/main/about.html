@@ -1,0 +1,44 @@
+app/templates/main/about.html
+
+{% extends 'base.html' %}
+{% block title %}About – RecipeHub{% endblock %}
+{% block content %}
+<div class="hero rounded-4 p-5 mb-5 text-white text-center">
+  <h1 class="display-5 fw-bold">About RecipeHub</h1>
+  <p class="lead mb-0">A community portal for sharing and discovering recipes.</p>
+</div>
+
+<div class="row g-4 mb-5">
+  <div class="col-md-4">
+    <div class="card h-100 border-0 shadow-sm text-center p-4">
+      <i class="fa-solid fa-pen-to-square fa-2x text-primary mb-3"></i>
+      <h5>Share your recipes</h5>
+      <p class="text-muted mb-0">Publish your own dishes with instructions, prep time and servings.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 border-0 shadow-sm text-center p-4">
+      <i class="fa-solid fa-magnifying-glass fa-2x text-primary mb-3"></i>
+      <h5>Search &amp; filter</h5>
+      <p class="text-muted mb-0">Find dishes by title, description or category in seconds.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 border-0 shadow-sm text-center p-4">
+      <i class="fa-solid fa-heart-pulse fa-2x text-primary mb-3"></i>
+      <h5>Nutrition facts</h5>
+      <p class="text-muted mb-0">Nutrition data is loaded live from the Spoonacular API.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+  <div class="card-body p-4">
+    <h4>Built with</h4>
+    <p class="text-muted mb-0">
+      Python 3.11, Flask, Jinja2, Flask-WTF, Flask-SQLAlchemy, Flask-Login, Flask-Migrate,
+      Bootstrap 5 and the Spoonacular API. Tested with pytest.
+    </p>
+  </div>
+</div>
+{% endblock %}

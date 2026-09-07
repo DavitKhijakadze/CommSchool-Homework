@@ -1,0 +1,38 @@
+
+
+<form method="post" novalidate>
+  {{ form.hidden_tag() }}
+  <div class="mb-3">
+    {{ form.title.label(class='form-label') }}
+    {{ form.title(class='form-control') }}
+    {% for e in form.title.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
+  </div>
+  <div class="mb-3">
+    {{ form.short_description.label(class='form-label') }}
+    {{ form.short_description(class='form-control', rows=3) }}
+    {% for e in form.short_description.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
+  </div>
+  <div class="mb-3">
+    {{ form.instructions.label(class='form-label') }}
+    {{ form.instructions(class='form-control', rows=8) }}
+    {% for e in form.instructions.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
+  </div>
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      {{ form.category.label(class='form-label') }}
+      {{ form.category(class='form-select') }}
+    </div>
+    <div class="col-md-4 mb-3">
+      {{ form.preparation_time.label(class='form-label') }}
+      {{ form.preparation_time(class='form-control') }}
+      {% for e in form.preparation_time.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
+    </div>
+    <div class="col-md-4 mb-3">
+      {{ form.servings.label(class='form-label') }}
+      {{ form.servings(class='form-control') }}
+      {% for e in form.servings.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
+    </div>
+  </div>
+  {{ form.submit(class='btn btn-primary') }}
+  <a href="{{ url_for('main.index') }}" class="btn btn-link">Cancel</a>
+</form>
